@@ -1,10 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "client/src/index.js"),
+    bundle: [
+      "bootstrap/dist/css/bootstrap.min.css",
+      path.resolve(__dirname, "client/src/index.js"),
+    ],
   },
   output: {
     path: path.resolve(__dirname, "client/dist"),
@@ -30,7 +35,11 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.jsx?$/,
@@ -53,6 +62,16 @@ module.exports = {
       title: "Weather App",
       filename: "index.html",
       template: "client/src/template.html",
+    }),
+
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+    }),
+    
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
     }),
   ],
 };

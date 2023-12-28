@@ -1,0 +1,113 @@
+.portalPage {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .portalDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .customer,
+  .employee {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    margin: 0 20px 0 20px;
+  }
+  
+  .customer {
+    background-image: url(https://i.pinimg.com/564x/ed/08/34/ed08341424d7cd9b9d1c73050234b484.jpg);
+  }
+  
+  .employee {
+    background-image: url(https://i.pinimg.com/564x/96/83/be/9683be95791ff3429886d65ad73e58cd.jpg);
+  }
+  
+  /* Add a semi-transparent white background to the text */
+  .customer span,
+  .employee span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .customer span {
+    background-color: rgba(255, 215, 173, 0.8); /* Semi-transparent white background */
+  }
+  
+  .employee span {
+    background-color: rgba(210, 230, 255, 0.973); /* Semi-transparent white background */
+  }
+
+  .link-style {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+  }
+  
+  /* SCSS for PC */
+  @media (max-width: 1920px) {
+    .customer,
+    .employee {
+      width: 350px;
+      height: 350px;
+    }
+  }
+  
+  /* SCSS for Laptop */
+  @media (max-width: 811px) {
+    .customer,
+    .employee {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  /* SCSS for Tablet */
+  @media (max-width: 710px) {
+    .customer,
+    .employee {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  /* SCSS for Phone */
+  @media (max-width: 600px) {
+    .portalDiv {
+      grid-template-columns: 1fr;
+    }
+  
+    .customer,
+    .employee {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .customer,
+    .employee {
+      width: 200px;
+      height: 200px;
+    }
+  }  
+  
+  /* Add styles for the clicked effect */
+  .clicked {
+    transform: translateY(10px);
+  }
+  

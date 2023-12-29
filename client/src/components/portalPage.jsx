@@ -21,7 +21,7 @@ function PortalPage() {
             <span>Customer</span>
           </div>
         </Link>
-        <Link to="/employee" className="link-style">
+        <Link to="/SignUp" className="link-style">
           <div
             className={`employee ${clickedItem === 'employee' ? 'clicked' : ''}`}
             onClick={() => handleClick('employee')}

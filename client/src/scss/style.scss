@@ -57,6 +57,41 @@
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit the color from the parent element */
   }
+
+  /* Sign Up Page */
+
+  .SignUpPageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+  .SignUpDiv {
+    margin-top: 2%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    width: 35%;    
+    height: 85%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.form-group {
+  width: 80%;
+}
+
+.form-group label {
+  padding: 3% 0  0.5% 0;
+}
+
+
   
   /* SCSS for PC */
   @media (max-width: 1920px) {

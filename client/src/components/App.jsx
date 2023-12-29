@@ -5,6 +5,7 @@ import PortalPage from './portalPage.jsx';
 import FeaturesPage from './FeaturesPage.jsx';
 import PricingPage from './PricingPage.jsx';
 import SignUp from './SignUp.jsx';
+import LogIn from './LogIn.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path='/SignUp' element={<SignUp />}/>
+          <Route path='/LogIn' element={<LogIn />}/>
           <Route path="/" element={<PortalPage />} />
         </Routes>
       </div>

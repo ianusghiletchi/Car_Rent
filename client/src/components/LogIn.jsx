@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
-function SignUp() {
+function LogIn() {
     return (
         <div className="authFormPageDiv">
             <div className="authFormDiv">
-                <h2 style={{padding: "7% 0 2% 0"}}>Sign Up</h2>
+                <h2 style={{padding: "0 0 2% 0"}}>Log In</h2>
                 <div className="form-group">
 
                     <label htmlFor="username">Name</label>
@@ -17,18 +16,12 @@ function SignUp() {
                     <label htmlFor="password">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Password"/>
 
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                    <input type="password" className="form-control" id="confirmPassword" placeholder="Confirm Password"/>
+                    <button type="submit" className="btn btn-warning" style={{marginTop: "7%"}}>Submit</button>
 
-                    <button type="submit" className="btn btn-warning" style={{marginTop: "7%", marginBottom: "5%"}}>Submit</button>
-
-                    <p>Already have an account?<Link to="/LogIn">Login</Link></p>
-
-                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                 </div>
             </div>
         </div>     
     );
 }
 
-export default SignUp;
+export default LogIn;

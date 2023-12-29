@@ -17,7 +17,7 @@ function Header() {
               <Link className="nav-link" to="/pricing">Pricing</Link>
             </div>
             <div className="navbar-nav ms-auto">
-              <Link className="nav-link" to="/login">Log In</Link>
+              <Link className="nav-link" to="/LogIn">Log In</Link>
             </div>
           </div>
         </div>

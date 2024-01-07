@@ -64,7 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 
     background-image: url(https://i.pinimg.com/564x/39/9b/25/399b25c47a9ebd0039a66280781525a5.jpg);
     background-size: cover;
@@ -82,7 +82,7 @@
     height: 85%;
     text-align: center;
 
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
@@ -111,6 +111,11 @@
       width: 350px;
       height: 350px;
     }
+
+    .authFormDiv {
+      width: 45%;
+      height: 90%;
+    }
   }
   
   /* SCSS for Laptop */
@@ -120,6 +125,12 @@
       width: 300px;
       height: 300px;
     }
+
+    .authFormDiv {
+      width: 50%;
+      height: 90%;
+    }
+
   }
   
   /* SCSS for Tablet */
@@ -128,6 +139,11 @@
     .employee {
       width: 250px;
       height: 250px;
+    }
+
+    .authFormDiv {
+      width: 65%;
+      height: 90%;
     }
   }
   
@@ -142,6 +158,11 @@
       width: 250px;
       height: 250px;
     }
+
+    .authFormDiv {
+      width: 75%;
+      height: 90%;
+    }
   }
 
   @media (max-width: 376px) {
@@ -149,6 +170,11 @@
     .employee {
       width: 200px;
       height: 200px;
+    }
+
+    .authFormDiv {
+      width: 90%;
+      height: 90%;
     }
   }  
   

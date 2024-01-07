@@ -1,6 +1,7 @@
+// PortalPage.jsx
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../scss/style.scss';
 
 function PortalPage() {
   const [clickedItem, setClickedItem] = useState(null);
@@ -13,7 +14,7 @@ function PortalPage() {
   return (
     <div className='portalPage container-fluid'>
       <div className='portalDiv'>
-        <Link to="/SignUp" className="link-style">
+        <Link to="/SignUp?userType=customer" className="link-style">
           <div
             className={`customer ${clickedItem === 'customer' ? 'clicked' : ''}`}
             onClick={() => handleClick('customer')}
@@ -21,7 +22,7 @@ function PortalPage() {
             <span>Customer</span>
           </div>
         </Link>
-        <Link to="/SignUp" className="link-style">
+        <Link to="/SignUp?userType=employee" className="link-style">
           <div
             className={`employee ${clickedItem === 'employee' ? 'clicked' : ''}`}
             onClick={() => handleClick('employee')}

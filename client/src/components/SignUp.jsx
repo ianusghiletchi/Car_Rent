@@ -1,11 +1,33 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// SignUp.jsx
+
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [userType, setUserType] = useState("");
+
+  // Extract userType from the URL using useLocation
+  const location = useLocation();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const userTypeParam = params.get('userType');
+    setUserType(userTypeParam || ""); // Set userType or an empty string if not present
+  }, [location.search]);
+
+  const getBoxShadowColor = () => {
+    switch (userType) {
+      case "customer":
+        return "rgba(255, 215, 173, 0.973)";
+      case "employee":
+        return "rgba(210, 230, 255, 0.973)";
+      default:
+        return "rgba(255, 255, 255, 1)";
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +43,7 @@ function SignUp() {
           name,
           email,
           password,
+          userType, // Include userType in the request
         }),
       });
 
@@ -47,7 +70,7 @@ function SignUp() {
 
   return (
     <div className="authFormPageDiv">
-      <div className="authFormDiv">
+      <div className="authFormDiv" style={{ boxShadow: `0px 0px 50px ${getBoxShadowColor()}` }}>
         <h2 style={{ padding: "7% 0 2% 0" }}>Sign Up</h2>
         <div className="form-group">
           <form onSubmit={handleSubmit}>

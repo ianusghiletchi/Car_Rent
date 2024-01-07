@@ -33,12 +33,12 @@ app.set('db', db);
 
 // Route to handle user registration
 app.post('/signup', (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, userType } = req.body;
   const db = req.app.get('db');
 
   db.query(
-    'INSERT INTO users (name, email, password) VALUES ($1, $2, $3)',
-    [name, email, password],
+    'INSERT INTO users (name, email, password, usertype) VALUES ($1, $2, $3, $4)',
+    [name, email, password, userType],
     (err, result) => {
       if (err) {
         console.error('Error inserting user:', err);

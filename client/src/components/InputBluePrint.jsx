@@ -15,7 +15,7 @@ function InputBluePrint(props) {
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          style={{width: "100%"}}
+          style={{ width: "100%", paddingLeft: "4%" }}
         />
     </div>
   );

@@ -50,6 +50,53 @@ app.post('/signup', (req, res) => {
   );
 });
 
+// Route to handle user login
+
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+  const db = req.app.get('db');
+
+  db.query(
+    'SELECT * FROM users WHERE email = $1 AND password = $2',
+    [email, password],
+    (err, result) => {
+      if (err) {
+        console.error('Error logging in:', err);
+        res.status(500).json({ success: false, message: 'Internal server error' });
+      } else if (result.rows.length === 0) {
+        res.status(401).json({ success: false, message: 'Invalid email or password' });
+      } else {
+        res.redirect('/');
+      }
+    }
+  );
+});
+
+
+
+// Route to handle Renting a Car
+
+app.post('/rentcar', (req, res) => {
+
+  const { carType, whereToPickUp, dateOfPickUp, dateOfDropOff } = req.body;
+  const db = req.app.get('db');
+
+  db.query(
+    'INSERT INTO users ( carType, whereToPickUp, dateOfPickUp, dateOfDropOff) VALUES ($1, $2, $3, $4)',
+    [carType, whereToPickUp, dateOfPickUp, dateOfDropOff],
+    (err, result) => {
+      if (err) {
+        console.error('Error inserting user:', err);
+        res.status(500).json({ success: false, message: 'Internal server error' });
+      } else {
+        res.status(201).json({ success: true, message: 'User registered successfully' });
+      }
+    }
+  );
+});
+
+
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);

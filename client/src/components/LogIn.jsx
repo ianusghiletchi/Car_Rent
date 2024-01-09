@@ -1,26 +1,62 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function LogIn() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Use fetch to make an API call to your login endpoint
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      // Parse the JSON response
+      const responseData = await response.json();
+
+      // Check if the request was successful
+      if (response.ok) {
+        // Do something with the successful response, for example, redirect to a new page
+        console.log("User registered successfully");
+        // Redirect or perform any other action as needed
+      } else {
+        // Handle the error response
+        console.error("Error during signup:", responseData.error);
+      }
+      
+    } catch(error) {
+      console.error("Error during signup:", error);
+    }
+  };
+
+
     return (
         <div className="authFormPageDiv">
             <div className="authFormDiv">
                 <h2 style={{padding: "0 0 2% 0"}}>Log In</h2>
                 <div className="form-group">
-                  <form action>
-                    <label htmlFor="username">Name</label>
-                    <input type="text" className="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your name"/>
 
                     <label htmlFor="email">Email address</label>
-                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"/>
+                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
                     <label htmlFor="password">Password</label>
-                    <input type="password" className="form-control" id="password" placeholder="Password"/>
+                    <input type="password" className="form-control" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
                     <button type="submit" className="btn btn-warning" style={{marginTop: "7%"}}>Submit</button>
 
                     <p>Dont have an account? <Link to="/SignUp">Sign Up</Link></p>
-                  </form>
+
                 </div>
             </div>
         </div>     

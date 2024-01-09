@@ -43,15 +43,12 @@ function SignUp() {
           name,
           email,
           password,
-          userType, // Include userType in the request
+          userType,
         }),
       });
 
       // Parse the JSON response
       const responseData = await response.json();
-
-      // Handle the response (success or error)
-      console.log(responseData);
 
       // Check if the request was successful
       if (response.ok) {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FeaturesPage() {
+function HowItWorksPage() {
   return (
     <div>
       <h1>Features Page</h1>
@@ -8,4 +8,4 @@ function FeaturesPage() {
   );
 }
 
-export default FeaturesPage;
+export default HowItWorksPage;

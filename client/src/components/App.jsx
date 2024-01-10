@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '../scss/style.scss';
 
 import Header from './Header.jsx';
-import PortalPage from './portalPage.jsx';
-import FeaturesPage from './FeaturesPage.jsx';
+import PortalPage from './PortalPage.jsx';
+import HowItWorksPage from './HowItWorksPage.jsx';
 import PricingPage from './PricingPage.jsx';
-import SignUp from './SignUp.jsx';
-import LogIn from './LogIn.jsx';
+import SignUp from './SignUpPage.jsx';
+import LogIn from './LogInPage.jsx';
 import HomePage from './HomePage.jsx';
 
 function App() {
@@ -16,11 +16,11 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/howitworks" element={<HowItWorksPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path='/SignUp' element={<SignUp />}/>
-          <Route path='/LogIn' element={<LogIn />}/>
-          <Route path="/PortalPage" element={<PortalPage />} />
+          <Route path='/signUp' element={<SignUp />}/>
+          <Route path='/sogIn' element={<LogIn />}/>
+          <Route path="/sortalPage" element={<PortalPage />} />
           <Route path="/" element={<HomePage />} />          
         </Routes>
       </div>

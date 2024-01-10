@@ -1,5 +1,5 @@
 import React from 'react';
-import RentInput from './RentInput.jsx';
+import RentInput from './ReactWidgets/RentInput.jsx';
 
 function HomePage() {
   return (

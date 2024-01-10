@@ -44,7 +44,7 @@ function LogIn() {
     return (
         <div className="authFormPageDiv">
             <div className="authFormDiv">
-                <h2 style={{padding: "0 0 2% 0"}}>Log In</h2>
+                <h2 style={{padding: "7% 0 2% 0"}}>Log In</h2>
                 <div className="form-group">
 
                     <label htmlFor="email">Email address</label>
@@ -53,7 +53,7 @@ function LogIn() {
                     <label htmlFor="password">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
-                    <button type="submit" className="btn btn-warning" style={{marginTop: "7%"}}>Submit</button>
+                    <button type="submit" className="btn btn-warning" style={{margin: "7% 0 4% 0"}}>Submit</button>
 
                     <p>Dont have an account? <Link to="/SignUp">Sign Up</Link></p>
 

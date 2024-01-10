@@ -72,8 +72,6 @@ app.post('/login', (req, res) => {
   );
 });
 
-
-
 // Route to handle Renting a Car
 
 app.post('/rentcar', (req, res) => {
@@ -82,7 +80,7 @@ app.post('/rentcar', (req, res) => {
   const db = req.app.get('db');
 
   db.query(
-    'INSERT INTO users ( carType, whereToPickUp, dateOfPickUp, dateOfDropOff) VALUES ($1, $2, $3, $4)',
+    'INSERT INTO rentals ( car_type, pickup_location, pickup_date, drop_off_date) VALUES ($1, $2, $3, $4)',
     [carType, whereToPickUp, dateOfPickUp, dateOfDropOff],
     (err, result) => {
       if (err) {
@@ -94,8 +92,6 @@ app.post('/rentcar', (req, res) => {
     }
   );
 });
-
-
 
 // Start the server
 app.listen(port, () => {

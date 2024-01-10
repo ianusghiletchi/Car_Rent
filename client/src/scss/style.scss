@@ -214,10 +214,38 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 20px;
-    border-color: #ffd735;
-    background-color: #ffd220;
+    border-color: #ffda46;
+    background-color: #ffde20;
   }
 
+  /* TopRentedCarsPage */
+
+  .TRCP-Text {
+    margin: 20px;
+    text-align: center;
+  }
+
+  /* capsule-div */
+
+  .capsule-div {
+    display: inline-block;
+    text-align: center;
+    background-color: gray;
+    border-radius: 20px;
+    padding: var(--capsule-padding, 10px 20px);
+  }
+  
+  .capsule-label {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .capsule-icon {
+    font-size: 25px;
+    color: black;
+    margin-right: 5px;
+  }
 
   /* SCSS for PC */
   @media (max-width: 1920px) {

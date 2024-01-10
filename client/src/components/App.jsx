@@ -5,7 +5,7 @@ import '../scss/style.scss';
 import Header from './Header.jsx';
 import PortalPage from './PortalPage.jsx';
 import HowItWorksPage from './HowItWorksPage.jsx';
-import PricingPage from './PricingPage.jsx';
+import TopRentedCarsPage from './TopRentedCarsPage.jsx';
 import SignUp from './SignUpPage.jsx';
 import LogIn from './LogInPage.jsx';
 import HomePage from './HomePage.jsx';
@@ -17,7 +17,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/howitworks" element={<HowItWorksPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/otprentedcarspage" element={<TopRentedCarsPage />} />
           <Route path='/signUp' element={<SignUp />}/>
           <Route path='/sogIn' element={<LogIn />}/>
           <Route path="/sortalPage" element={<PortalPage />} />

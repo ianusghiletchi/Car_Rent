@@ -1,6 +1,7 @@
 import React from 'react';
 import RentInput from './ReactWidgets/RentInput.jsx';
 import HowItWorksPage from './HowItWorksPage.jsx';
+import TopRentedCarsPage from './TopRentedCarsPage.jsx';
 
 function HomePage() {
   return (
@@ -8,8 +9,11 @@ function HomePage() {
       <div className='homePage'>
           <RentInput />
       </div>
-      <div style={{ backgroundColor: '#EBEF95' }}>
+      <div style={{ backgroundColor: '#ffe1ad' }}>
         <HowItWorksPage />
+      </div>
+      <div>
+        <TopRentedCarsPage />
       </div>
     </div>   
   );

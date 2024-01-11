@@ -17,10 +17,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/howitworks" element={<HowItWorksPage />} />
-          <Route path="/otprentedcarspage" element={<TopRentedCarsPage />} />
+          <Route path="/toprentedcarspage" element={<TopRentedCarsPage />} />
           <Route path='/signUp' element={<SignUp />}/>
-          <Route path='/sogIn' element={<LogIn />}/>
-          <Route path="/sortalPage" element={<PortalPage />} />
+          <Route path='/logIn' element={<LogIn />}/>
+          <Route path="/portalPage" element={<PortalPage />} />
           <Route path="/" element={<HomePage />} />          
         </Routes>
       </div>

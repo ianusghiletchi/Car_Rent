@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InputBluePrint from '../BluePrints/InputBluePrint.jsx';
+import InputBluePrint from '../BluePrints/Input.jsx';
 
 function RentInput(props) {
 

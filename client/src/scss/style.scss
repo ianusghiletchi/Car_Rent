@@ -1,5 +1,14 @@
 /* https://www.pinterest.com/pin/728035096075638990/ */
 
+.OffCssBtn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent; 
+  cursor: pointer;
+  height: auto; /* Set height to auto */
+}
+
 .portalPage {
     display: grid;
     justify-items: center;
@@ -220,31 +229,60 @@
 
   /* TopRentedCarsPage */
 
+  .TRCP-Div {
+    background-color: #ffecca;
+  }
+
   .TRCP-Text {
-    margin: 20px;
+    padding: 30px 0 15px 0;
     text-align: center;
   }
 
   /* capsule-div */
 
+  .Capsules-Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap as needed */
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .capsule-div {
     display: inline-block;
     text-align: center;
-    background-color: gray;
+    background-color: lightgray;
     border-radius: 20px;
-    padding: var(--capsule-padding, 10px 20px);
+    padding: 8px 15px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
   }
   
   .capsule-label {
     color: black;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600 ;
   }
 
   .capsule-icon {
-    font-size: 25px;
+    font-size: 20px;
     color: black;
     margin-right: 5px;
+  }
+
+  /* Card */
+
+  .Car-Cards-Div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
   }
 
   /* SCSS for PC */

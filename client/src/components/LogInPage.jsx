@@ -55,7 +55,7 @@ function LogIn() {
 
                     <button type="submit" className="btn btn-warning" style={{margin: "7% 0 4% 0"}}>Submit</button>
 
-                    <p>Dont have an account? <Link to="/SignUp">Sign Up</Link></p>
+                    <p>Dont have an account? <Link to="/portalPage">Sign Up</Link></p>
 
                 </div>
             </div>

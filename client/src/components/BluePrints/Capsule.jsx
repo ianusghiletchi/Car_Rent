@@ -1,12 +1,13 @@
 import React from 'react';
-import { SiBmw } from "react-icons/si";
 
-function Capsule() {
+function Capsule(props) {
+  const { Icon, label, backgroundColor, color } = props;
+
   return (
-<div className="capsule-div">
-  <SiBmw className="capsule-icon" />
-  <span className="capsule-label">CarBrand</span>
-</div>   
+    <div className="capsule-div shadow-lg" style={{ backgroundColor: backgroundColor }}>
+      {Icon && <Icon className="capsule-icon" />}
+      <span className="capsule-label" style={{ color: color }}>{label}</span>
+    </div>
   );
 }
 

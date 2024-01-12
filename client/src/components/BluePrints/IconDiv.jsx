@@ -1,19 +1,19 @@
 import React from 'react';
 
 function IconDiv(props) {
-  const { bgcolor, color, fontsize } = props;
+  const { title, label, height, width, bgcolor, color, fontsize} = props;
   const IconComponent = props.icon;
 
   return (
     <div className='iconDivPage'>
-      <div className='IconDiv shadow-lg' style={{ backgroundColor: bgcolor, color: color }}>
+      <div className='IconDiv shadow-lg' style={{ backgroundColor: bgcolor, color: color, height: height, width: width }}>
         <IconComponent className='HIWP-Icon' style={{ fontSize: fontsize }} />
       </div>
-      <div className="TextContainer" style={{ width: '80%' }}>
-        <h5>Lorem ipsum dolor sit</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl</p>
+      <div className="TextContainer" style={{ width: '80%'}}>
+        <h5>{title}</h5>
+        <p>{label}</p>
       </div>
-    </div>   
+    </div>
   );
 }
 

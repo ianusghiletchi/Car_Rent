@@ -14,9 +14,9 @@ function HowItWorksPage() {
       </p>
     </div>  
     <div className='CPB-Div'>
-      <IconDiv icon={PlaceIcon} fontsize={60} bgcolor={'#ffcd0e'} />
-      <IconDiv icon={CalendarMonthIcon} fontsize={60} bgcolor={'#ffcd0e'} />
-      <IconDiv icon={DirectionsCarFilledIcon} fontsize={60} bgcolor={'#ffcd0e'} />
+      <IconDiv icon={PlaceIcon} title='Lorem ipsum dolor sit' label='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet' fontsize={60} bgcolor={'#ffcd0e'} />
+      <IconDiv icon={CalendarMonthIcon} title='Lorem ipsum dolor sit' label='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet' fontsize={60} bgcolor={'#ffcd0e'} />
+      <IconDiv icon={DirectionsCarFilledIcon} title='Lorem ipsum dolor sit' label='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet' fontsize={60} bgcolor={'#ffcd0e'} />
     </div>
   </div>      
   );

@@ -1,0 +1,65 @@
+.BSALCP-Main-Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.BSALCP-Text {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.BSALCP-Icons {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+}
+
+.BSALCP-Icon-Div {
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.BSALCP-Icon-Label {
+    padding: 0 10px 0 10px;
+    width: 100%;
+}
+
+.BSALCP-Icon-Label p {
+    color: rgb(112, 112, 112);
+}
+
+@media (max-width: 900px) {
+    .BSALCP-Main-Grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .BSALCP-Icons {
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        padding: 10px 0 10px 0;
+        justify-content: center; /* Add this line to center the icons horizontally */
+    }
+
+    .BSALCP-Icon-Div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Add this line to center the content vertically */
+        padding-right: 5px;
+    }
+
+    .BSALCP-Text {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .BSALCP-Icons {
+        padding: 10px;
+    }
+}

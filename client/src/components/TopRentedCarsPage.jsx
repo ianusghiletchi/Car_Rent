@@ -17,7 +17,7 @@ function TopRentedCarsPage() {
         <Capsule Icon={SiBmw} label="BMW" />
         <Capsule Icon={SiBmw} label="BMW" />
       </div>
-      <div className='Car-Cards-Div'>
+      <div className='Car-Cards-Div' style={{ paddingBottom: '30px' }}>
         <Card />
         <Card />
         <Card />

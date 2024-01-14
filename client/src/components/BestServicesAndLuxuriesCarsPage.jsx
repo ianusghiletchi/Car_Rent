@@ -13,7 +13,7 @@ function BestServicesAndLuxuriesCarsPage() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, Ornare at etiam mattis sagittis sodales sagittis.</p>
             </div>
             <div className="BSALCP-Main-Grid">
-                <img style={{ width: "100%" }} src="https://i.pinimg.com/564x/e9/d7/39/e9d7397dbedce3e03b006f9406f4abbf.jpg"/>
+                <img style={{ width: "95%", justifySelf: "center" }} src="https://th.bing.com/th/id/R.8b33d9c87af83378a5cc327aca266871?rik=qtm8z3%2bc5r38Nw&riu=http%3a%2f%2fpurepng.com%2fpublic%2fuploads%2flarge%2fpurepng.com-ferrari-california-red-carcarferrarivehicletransport-96152465228982kdz.png&ehk=dZfmLvjC%2fBK8Y2Pa%2b9ZzixaKNSa7yQVEdJrBjsHYKsA%3d&risl=&pid=ImgRaw&r=0"/>
                 <div className="BSALCP-Icons">
                     <div className="BSALCP-Icon-Div">
                         <IconDiv

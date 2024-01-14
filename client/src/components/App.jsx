@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import '../scss/style.scss';
-
 import Header from './Header.jsx';
 import PortalPage from './PortalPage.jsx';
 import HowItWorksPage from './HowItWorksPage.jsx';

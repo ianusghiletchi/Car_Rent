@@ -1,10 +1,10 @@
 import React from 'react';
-import Capsule from '../BluePrints/Capsule.jsx';
+import Capsule from './Capsule.jsx';
 import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
 import { GiSteeringWheel } from "react-icons/gi";
 import { BsSpeedometer } from "react-icons/bs";
 
-function Card() {
+function CarCard() {
   return (
     <div style={{ width: '18rem', border: '1px solid #000', borderRadius: '20px', backgroundColor: 'white', padding: '10px', margin: '10px' }} className='shadow'>
     <span style={{ textAlign: 'left', border: '1px solid #000', borderRadius: '5px', padding: '3px 4px', marginTop: '10px', display: 'inline-block', backgroundColor: '#F1F4FF', fontSize: '15px' }}>Diesel</span>
@@ -26,4 +26,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default CarCard;

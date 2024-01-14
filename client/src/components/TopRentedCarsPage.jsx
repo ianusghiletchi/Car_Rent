@@ -1,6 +1,6 @@
 import React from 'react';
 import Capsule from './BluePrints/Capsule.jsx';
-import Card from './BluePrints/Card.jsx';
+import Card from './BluePrints/CarCard.jsx';
 import { SiBmw } from "react-icons/si";
 
 function TopRentedCarsPage() {

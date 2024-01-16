@@ -4,12 +4,9 @@ import "../../scss/BluePrints.scss/reviewCard.scss";
 import { GoPin } from "react-icons/go";
 import StarIcon from '@mui/icons-material/Star';
 
-function ReviewCard() {
+function ReviewCard(props) {
 
-    const [name, setName] = useState("");
-    const [avatar, setAvatar] = useState("");
-    const [rating, setRating] = useState(0);
-    const [comment, setComment] = useState("");
+    const { name, avatar, rating, comment } = props;
 
     return (
         <div className="reviewCard-Main-Div">

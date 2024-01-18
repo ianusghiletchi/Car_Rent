@@ -1,7 +1,28 @@
 
+.reviewsPage {
+    background-color: rgb(255, 250, 242);
+}
+
+.reviewsText {
+    width: 100%;
+    padding: 60px 0 15px 0;
+    text-align: center;
+}
+
+.reviewsText P {
+    width: 70%;
+    padding-top: 10px;
+    margin: 0 auto;
+    color: gray;
+
+}
+
 .reviewCards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 3%;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 15px 0 15px 0;
 }

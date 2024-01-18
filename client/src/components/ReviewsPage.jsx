@@ -4,8 +4,8 @@ import ReviewCard from "./BluePrints/ReviewCard.jsx";
 
 function ReviewsPage() {
     return (
-    <div>
-        <div>
+    <div className="reviewsPage">
+        <div className="reviewsText">
             <h1>What People Say About Us?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet</p>
         </div>

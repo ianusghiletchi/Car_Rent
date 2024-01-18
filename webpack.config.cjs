@@ -17,7 +17,7 @@ module.exports = {
     clean: true,
     assetModuleFilename: "[name][ext]",
   },
-  devtool: "source-map",
+  devtool: false, // Disable source maps
   devServer: {
     static: {
       directory: path.resolve(__dirname, "client/dist"),

@@ -2,8 +2,10 @@ import React from 'react';
 import Capsule from './BluePrints/Capsule.jsx';
 import Card from './BluePrints/CarCard.jsx';
 import { SiBmw } from "react-icons/si";
+import CarCardImg from '../imgs/car_card-img.png';
 
 function TopRentedCarsPage() {
+
   return (
     <div className='TRCP-Div'>
       <div className='TRCP-Text'>
@@ -18,9 +20,9 @@ function TopRentedCarsPage() {
         <Capsule Icon={SiBmw} label="BMW" />
       </div>
       <div className='Car-Cards-Div' style={{ paddingBottom: '30px' }}>
-        <Card />
-        <Card />
-        <Card />
+        <Card fuel_type="Petrol" img={CarCardImg} brand="BMW" seats="5" transmission_type="Auto" speed="180" daily_price="200" />
+        <Card fuel_type="Petrol" img={CarCardImg} brand="BMW" seats="5" transmission_type="Auto" speed="180" daily_price="200" />
+        <Card fuel_type="Petrol" img={CarCardImg} brand="BMW" seats="5" transmission_type="Auto" speed="180" daily_price="200" />
       </div>
     </div>
   );

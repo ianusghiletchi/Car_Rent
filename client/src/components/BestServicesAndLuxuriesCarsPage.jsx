@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "../scss/BSALCP.scss";
+import "../scss/BSALCP.scss";     
 import IconDiv from "./BluePrints/IconDiv.jsx";
+import BSALCIMG from "../imgs/BSALC-img.png";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbCurrentLocation } from "react-icons/tb";
 import { MdOutlineCancel } from "react-icons/md";
@@ -40,7 +41,7 @@ function BestServicesAndLuxuriesCarsPage() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, Ornare at etiam mattis sagittis sodales sagittis.</p>
       </div>
       <div className="BSALCP-Main-Grid">
-        <img style={{ width: "95%", justifySelf: "center" }} src="https://th.bing.com/th/id/R.8b33d9c87af83378a5cc327aca266871?rik=qtm8z3%2bc5r38Nw&riu=http%3a%2f%2fpurepng.com%2fpublic%2fuploads%2flarge%2fpurepng.com-ferrari-california-red-carcarferrarivehicletransport-96152465228982kdz.png&ehk=dZfmLvjC%2fBK8Y2Pa%2b9ZzixaKNSa7yQVEdJrBjsHYKsA%3d&risl=&pid=ImgRaw&r=0"/>
+      <img src={BSALCIMG} style={{ width: "95%", justifySelf: "center" }} alt="Beautiful Car" />
         <div className="BSALCP-Icons">
           <div className="BSALCP-Icon-Div">
             <IconDiv

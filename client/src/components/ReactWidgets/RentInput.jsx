@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputBluePrint from '../BluePrints/Input.jsx';
+import '../../scss/rentInput.scss';
 
 function RentInput(props) {
 
@@ -63,7 +64,7 @@ function RentInput(props) {
           <button
             type="submit"
             className="btn btn-warning"
-            style={{ borderRadius: "20px", margin: "2% 0 0 0" }}
+            style={{ borderRadius: "20px", margin: "2% 0 2% 0" }}
           >
             Submit
           </button>

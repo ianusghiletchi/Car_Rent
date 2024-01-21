@@ -126,39 +126,6 @@
     background-position: center;
   }
 
-/* RentInput.jsx */
-
-  .rentInputDiv {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 2%;
-    margin-left: 2.5%;
-
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
-    overflow: hidden;
-    transition: transform 0.2s ease-in-out;
-    margin: 0 20px 0 20px;
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.973);
-  }
-
-.rentInput {
-  justify-self: flex-start;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr 1fr;
-  justify-content: flex-start;
-  text-align: left;
-  gap: 30px;
-}
-
 /* InputBluePrint */
 
 .inputBPDiv {

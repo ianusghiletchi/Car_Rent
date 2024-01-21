@@ -5,6 +5,8 @@ import BSALCIMG from "../imgs/BSALC-img.png";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbCurrentLocation } from "react-icons/tb";
 import { MdOutlineCancel } from "react-icons/md";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function BestServicesAndLuxuriesCarsPage() {
 
@@ -41,7 +43,7 @@ function BestServicesAndLuxuriesCarsPage() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, Ornare at etiam mattis sagittis sodales sagittis.</p>
       </div>
       <div className="BSALCP-Main-Grid">
-      <img src={BSALCIMG} style={{ width: "95%", justifySelf: "center" }} alt="Beautiful Car" />
+      <LazyLoadImage src={BSALCIMG} style={{ width: "95%", justifySelf: "center" }} alt="Beautiful Car" />
         <div className="BSALCP-Icons">
           <div className="BSALCP-Icon-Div">
             <IconDiv

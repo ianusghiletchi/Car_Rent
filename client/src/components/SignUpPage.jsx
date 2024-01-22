@@ -1,8 +1,11 @@
 // SignUp.jsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../scss/authForm.scss';
+
+
+const Header = lazy(() => import('./Header.jsx'));
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -67,6 +70,10 @@ function SignUp() {
   };
 
   return (
+  <div>
+    <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+    </Suspense>    
     <div className="authFormPageDiv">
       <div className="authFormDiv" style={{ boxShadow: `0px 0px 50px ${getBoxShadowColor()}` }}>
         <h2 style={{ padding: "7% 0 2% 0" }}>Sign Up</h2>
@@ -132,6 +139,7 @@ function SignUp() {
         </div>
       </div>
     </div>
+  </div>    
   );
 }
 

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import '../scss/authForm.scss';
+
+const Header = lazy(() => import('./Header.jsx'));
 
 function LogIn() {
 
@@ -43,6 +45,10 @@ function LogIn() {
 
 
     return (
+      <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Header />
+        </Suspense>    
         <div className="authFormPageDiv">
             <div className="authFormDiv">
                 <h2 style={{padding: "7% 0 2% 0"}}>Log In</h2>
@@ -60,8 +66,9 @@ function LogIn() {
 
                 </div>
             </div>
-        </div>     
-    );
+        </div>  
+      </div>    
+      );
 }
 
 export default LogIn;

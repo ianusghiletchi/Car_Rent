@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../scss/BluePrints.scss/iconDiv.scss';
 
 function IconDiv(props) {
   const { title, label, height, width, bgcolor, color, fontsize} = props;

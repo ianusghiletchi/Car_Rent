@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../scss/BluePrints.scss/capsule.scss';
 
 function Capsule(props) {
   const { Icon, label, backgroundColor, color } = props;

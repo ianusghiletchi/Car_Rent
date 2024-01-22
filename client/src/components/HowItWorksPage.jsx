@@ -1,5 +1,6 @@
 import React from 'react';
 import IconDiv from './BluePrints/IconDiv.jsx';
+import '../scss/HIWP.scss';
 import PlaceIcon from '@mui/icons-material/Place';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';

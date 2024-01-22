@@ -1,5 +1,6 @@
 import React from 'react';
 import Capsule from './Capsule.jsx';
+import '../../scss/BluePrints.scss/carCard.scss';
 import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
 import { GiSteeringWheel } from "react-icons/gi";
 import { BsSpeedometer } from "react-icons/bs";

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../scss/BluePrints.scss/input.scss';
 
 function InputBluePrint(props) {
   const { id, labelText, placeholder, value, onChange } = props;

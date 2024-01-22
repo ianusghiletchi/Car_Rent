@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import '../scss/authForm.scss';
 
 function SignUp() {
   const [name, setName] = useState("");

@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../scss/homePage.scss';
 
 // Lazy-loaded components
 const Header = lazy(() => import('./Header.jsx'));

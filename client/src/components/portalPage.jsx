@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../scss/portalPage.scss';
 
 function PortalPage() {
   const [clickedItem, setClickedItem] = useState(null);

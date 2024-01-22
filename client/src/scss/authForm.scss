@@ -1,0 +1,40 @@
+.authFormPageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(https://i.pinimg.com/564x/39/9b/25/399b25c47a9ebd0039a66280781525a5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .authFormDiv {
+    margin-top: 2%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    width: 40%;    
+    height: 90%;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    margin: 0 20px 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.form-group {
+  width: 80%;
+}
+
+.form-group label {
+  padding: 3% 0  0.5% 0;
+}

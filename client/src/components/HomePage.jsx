@@ -9,6 +9,7 @@ const HowItWorksPage = lazy(() => import('./HowItWorksPage.jsx'));
 const TopRentedCarsPage = lazy(() => import('./TopRentedCarsPage.jsx'));
 const BestServicesAndLuxuriesCarsPage = lazy(() => import('./BestServicesAndLuxuriesCarsPage.jsx'));
 const ReviewsPage = lazy(() => import('./ReviewsPage.jsx'));
+const WeRentPowerfulMachinesTooPage = lazy(() => import('./WeRentPowerfulMachinesTooPage.jsx'));
 
 function HomePage() {
   return (
@@ -29,6 +30,9 @@ function HomePage() {
         </div>
         <div>
           <ReviewsPage />
+        </div>
+        <div>
+          <WeRentPowerfulMachinesTooPage />
         </div>
       </Suspense>
     </div>

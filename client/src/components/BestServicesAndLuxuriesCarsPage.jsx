@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../scss/BSALCP.scss";     
 import IconDiv from "./BluePrints/IconDiv.jsx";
-import BSALCIMG from "../imgs/BSALC-img.png";
+import BSALCIMG from "../imgs/BSALC-img.jpg";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbCurrentLocation } from "react-icons/tb";
 import { MdOutlineCancel } from "react-icons/md";

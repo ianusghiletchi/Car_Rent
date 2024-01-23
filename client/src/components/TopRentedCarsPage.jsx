@@ -3,7 +3,7 @@ import Capsule from './BluePrints/Capsule.jsx';
 import Card from './BluePrints/CarCard.jsx';
 import '../scss/TRCP.scss';
 import { SiBmw } from "react-icons/si";
-import CarCardImg from '../imgs/car_card-img.png';
+import CarCardImg from '../imgs/car_card-img.jpg';
 
 function TopRentedCarsPage() {
 

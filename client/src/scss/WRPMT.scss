@@ -23,5 +23,24 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    margin-top: 2.5%;
     margin-bottom: 2.5%;
+}
+
+@media (max-width: 769px) {
+    .WRPMT-Image-Div {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 426px) {
+    .WRPMT-Image-Div {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 376px) {
+    .WRPMT-Image-Div {
+        height: 30vh;
+    }
 }

@@ -9,3 +9,12 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  /* SCSS for Phone */
+  @media (max-width: 600px) {
+
+    .homePage {
+      justify-content: center;
+    }
+
+  }

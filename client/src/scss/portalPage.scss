@@ -57,3 +57,83 @@
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit the color from the parent element */
   }
+
+
+  @media (max-width: 1920px) {
+    .customer,
+    .employee {
+      width: 350px;
+      height: 350px;
+    }
+
+    .authFormDiv {
+      width: 40%;
+      height: max-content;
+    }
+  }
+  
+  /* SCSS for Laptop */
+  @media (max-width: 811px) {
+    .customer,
+    .employee {
+      width: 300px;
+      height: 300px;
+    }
+
+    .authFormDiv {
+      width: 50%;
+    }
+
+  }
+  
+  /* SCSS for Tablet */
+  @media (max-width: 710px) {
+    .customer,
+    .employee {
+      width: 250px;
+      height: 250px;
+    }
+
+    .authFormDiv {
+      width: 65%;
+    }
+  }
+  
+  /* SCSS for Phone */
+  @media (max-width: 600px) {
+
+    .portalDiv {
+      grid-template-columns: 1fr;
+    }
+  
+    .customer,
+    .employee {
+      width: 250px;
+      height: 250px;
+    }
+
+    .authFormDiv {
+      width: 75%;
+    }
+
+  }
+
+/* Mini-Phone */
+
+  @media (max-width: 376px) {
+    .customer,
+    .employee {
+      width: 200px;
+      height: 200px;
+    }
+
+    .authFormDiv {
+      width: 90%;
+    }
+  }  
+  
+  /* Add styles for the clicked effect */
+  .clicked {
+    transform: translateY(10px);
+  }
+    

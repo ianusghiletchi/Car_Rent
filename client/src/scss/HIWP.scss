@@ -21,3 +21,26 @@
     border-color: #ffda46;
     background-color: #ffde20;
   }
+  
+  /* SCSS for Laptop */
+  @media (max-width: 811px) {
+
+    .HIWP-Text {
+      margin: 6% 0 6% 0;
+    }
+
+    .CPB-Div {
+      grid-template-columns: auto;
+    }
+
+  }
+  
+  /* SCSS for Phone */
+  @media (max-width: 600px) {
+
+    .HIWP-Text {
+      margin: 10% 0 10% 0;
+      width: 70%;
+    }
+
+  }

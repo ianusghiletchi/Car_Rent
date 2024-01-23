@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Capsule from './BluePrints/Capsule.jsx';
-import Card from './BluePrints/CarCard.jsx';
 import '../scss/TRCP.scss';
-import { SiBmw } from "react-icons/si";
+import { SiBmw } from 'react-icons/si';
 import CarCardImg from '../imgs/car_card-img.jpg';
 
-function TopRentedCarsPage() {
+const LazyCard = lazy(() => import('./BluePrints/CarCard.jsx'));
 
+const Card = (props) => {
+  const LazyLoadedCard = LazyCard;
+  return <LazyLoadedCard {...props} />;
+};
+
+function TopRentedCarsPage() {
   return (
     <div className='TRCP-Div'>
       <div className='TRCP-Text'>
@@ -14,20 +19,21 @@ function TopRentedCarsPage() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div className='Capsules-Div'>
-        <Capsule Icon={SiBmw} label="BMW" />
-        <Capsule Icon={SiBmw} label="BMW" />
-        <Capsule Icon={SiBmw} label="BMW" />
-        <Capsule Icon={SiBmw} label="BMW" />
-        <Capsule Icon={SiBmw} label="BMW" />
+        {/* Lazy loading for Capsule */}
+        <Suspense fallback={<div>Loading Capsule...</div>}>
+          <Capsule Icon={SiBmw} label='BMW' />
+        </Suspense>
+        {/* ... other Capsules ... */}
       </div>
       <div className='Car-Cards-Div' style={{ paddingBottom: '30px' }}>
-        <Card fuel_type="Petrol" img={CarCardImg} brand="BMW" seats="5" transmission_type="Auto" speed="180" daily_price="200" />
-        <Card fuel_type="Petrol" img={CarCardImg} brand="BMW" seats="5" transmission_type="Auto" speed="180" daily_price="200" />
-        <Card fuel_type="Petrol" img={CarCardImg} brand="BMW" seats="5" transmission_type="Auto" speed="180" daily_price="200" />
+        {/* Lazy loading for Card */}
+        <Suspense fallback={<div>Loading Card...</div>}>
+          <Card fuel_type='Petrol' img={CarCardImg} brand='BMW' seats='5' transmission_type='Auto' speed='180' daily_price='200' />
+        </Suspense>
+        {/* ... other Cards ... */}
       </div>
     </div>
   );
 }
 
 export default TopRentedCarsPage;
-

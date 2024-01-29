@@ -20,16 +20,17 @@ function TopRentedCarsPage() {
       </div>
       <div className='Capsules-Div'>
         {/* Lazy loading for Capsule */}
-        <Suspense fallback={<div>Loading Capsule...</div>}>
           <Capsule Icon={SiBmw} label='BMW' />
-        </Suspense>
-        {/* ... other Capsules ... */}
+          <Capsule Icon={SiBmw} label='BMW' />
+          <Capsule Icon={SiBmw} label='BMW' />
+          <Capsule Icon={SiBmw} label='BMW' />
+          <Capsule Icon={SiBmw} label='BMW' />
       </div>
       <div className='Car-Cards-Div' style={{ paddingBottom: '30px' }}>
         {/* Lazy loading for Card */}
-        <Suspense fallback={<div>Loading Card...</div>}>
           <Card fuel_type='Petrol' img={CarCardImg} brand='BMW' seats='5' transmission_type='Auto' speed='180' daily_price='200' />
-        </Suspense>
+          <Card fuel_type='Petrol' img={CarCardImg} brand='BMW' seats='5' transmission_type='Auto' speed='180' daily_price='200' />
+          <Card fuel_type='Petrol' img={CarCardImg} brand='BMW' seats='5' transmission_type='Auto' speed='180' daily_price='200' />
         {/* ... other Cards ... */}
       </div>
     </div>

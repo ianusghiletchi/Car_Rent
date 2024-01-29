@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../scss/homePage.scss';
 
@@ -15,7 +15,6 @@ const CarTalesCorners = lazy(() => import('./CarTalesCorners.jsx'));
 function HomePage() {
   return (
     <div className='homePageDiv'>
-      <Suspense fallback={<div>Loading...</div>}>
         <Header />
         <div className='homePage'>
           <RentInput />
@@ -38,7 +37,6 @@ function HomePage() {
         <div>
           <CarTalesCorners />
         </div>
-      </Suspense>
     </div>
   );
 }

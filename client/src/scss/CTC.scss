@@ -23,7 +23,12 @@
 
 @media (max-width: 677px) {
 
+    .CTC-Text {
+        width: 60%;
+    }
+
     .CTC-Cards {
+        width: 60%;
         flex-direction: column;
     }
 

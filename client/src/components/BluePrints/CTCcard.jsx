@@ -9,7 +9,7 @@ function CTCcard() {
             <div className="CTCcard-Text">
                 <p style={{ color: "gray"}}><FaCalendarWeek /> March 15, 2022</p>
                 <h6>The new Car that will change your life</h6>
-                <h6 style={{ color: "orange", cursor: "pointer"}}>Read More</h6>
+                <h6 style={{ color: "orange", cursor: "pointer", fontSize: "lighter"}}>Read More</h6>
             </div>
         </div>
     );

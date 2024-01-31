@@ -1,0 +1,21 @@
+.footer-main-div {
+    width: 100%;
+    background-color: rgb(255, 249, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5% 0 5% 0;
+}
+
+.brands-owned-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+.icon {
+    color: gray;
+    font-size: 50px;
+}

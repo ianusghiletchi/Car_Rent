@@ -11,6 +11,7 @@ const BestServicesAndLuxuriesCarsPage = lazy(() => import('./BestServicesAndLuxu
 const ReviewsPage = lazy(() => import('./ReviewsPage.jsx'));
 const WeRentPowerfulMachinesTooPage = lazy(() => import('./WeRentPowerfulMachinesTooPage.jsx'));
 const CarTalesCorners = lazy(() => import('./CarTalesCorners.jsx'));
+const Footer = lazy(() => import('./Footer.jsx'));
 
 function HomePage() {
   return (
@@ -37,6 +38,10 @@ function HomePage() {
         <div>
           <CarTalesCorners />
         </div>
+        <div>
+          <Footer />          
+        </div>
+
     </div>
   );
 }

@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
 
-    padding: 5% 0 5% 0;
+    padding: 5% 0 2% 0;
 }
 
 .brands-owned-div {
@@ -13,9 +13,198 @@
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
+    padding: 0 0 4% 0;
+}
+
+.info-div p {
+    padding: 0;
 }
 
 .icon {
     color: gray;
     font-size: 50px;
+    margin: 10px;
+}
+
+.info-div {
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
+    gap: 2%; 
+}
+
+.footer-logo-outro {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.footer-logo-outro img {
+    width: 55%;
+}
+
+.footer-contact-info {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    color: gray;
+    text-align: left;
+}
+
+.footer-contact-info .icon {
+    margin-right: 5px; /* Adjust spacing between icon and text as needed */
+}
+
+.footer-information-links {
+    color: gray;
+}
+
+.logo-text-div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.logo-div {
+    justify-self: center;
+    align-self: center;
+}
+
+.text-div p {
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;   
+    font-size: 30px;
+}
+
+.newsletter-input-div {
+    margin-top: 5%;
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    gap: 10px;
+}
+
+.newsletter-input {
+    width: 100%;
+    padding: 5px 5px 5px 15px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+
+.subscribe-button {
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: #FFCD0E;
+    color: white;
+}
+
+.socials {
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+@media (max-width: 1445px) {
+    .info-div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .footer-subscribe {
+        margin: 10% 0 5% 0;
+        grid-row: 2;
+        grid-column: span 3;
+        width: 70%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .socials {
+        text-align: center;
+        justify-content: center;
+    }
+
+}    
+
+@media (max-width: 769px) {
+
+    .brands-owned-div {
+        flex-wrap: wrap; /* Allow icons to wrap to next line */
+        justify-content: center; /* Center icons on smaller screens */
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 631px) {
+    .info-div {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer-subscribe {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .footer-logo-outro {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-outro img {
+        margin: 0 auto; /* Center horizontally */
+    }
+
+
+    .footer-contact-info {
+        width: 65%;
+        text-align: center;
+    }
+
+    .subscribe-button {
+        font-size: 12px; /* Adjust font size */
+      }
+}
+
+@media screen and (max-width: 376px) {
+    .newsletter-input {
+      width: 100%; /* Make the input field wider */
+    }
+  
+    .subscribe-button {
+      font-size: 10px; /* Adjust font size */
+    }
+  }
+  
+  
+
+@media (max-width: 321px) {
+
+    .icon {
+        font-size: 30px;
+    }
+    
 }

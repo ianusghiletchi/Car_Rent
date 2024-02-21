@@ -9,6 +9,7 @@ import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { RiTiktokLine } from "react-icons/ri";
+import logo from "../imgs/logo.jpg";
 
 function Footer() {
 
@@ -30,7 +31,7 @@ function Footer() {
             </div>
             <div className="info-div">
                 <div className="footer-logo-outro">
-                    <img src="https://cars-rent.pl/wp-content/uploads/2020/02/logo_cars_rent_white-png-small.png"></img>
+                <img src={logo} alt="Company Logo" />
                     <p style={{ color: 'gray', width: '90%', margin: '0 auto'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget tortor non sem varius convallis
                      nec in ipsum.</p>
                 </div>

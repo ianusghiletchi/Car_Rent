@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <div> 
-      <nav className="navbar navbar-expand-lg" style={{backgroundColor: '#ffcd0e'}}>
+      <nav className="navbar navbar-expand-lg" style={{backgroundColor: '#ffcd0e', fontFamily: 'Roboto, sans-serif'}}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Navbar</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

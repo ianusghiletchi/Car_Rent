@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 105vh;
 
     background-image: url(https://i.pinimg.com/564x/39/9b/25/399b25c47a9ebd0039a66280781525a5.jpg);
     background-size: cover;
@@ -37,4 +37,25 @@
 
 .form-group label {
   padding: 3% 0  0.5% 0;
+}
+
+@media (max-width: 769px) {
+  .authFormDiv {
+    width: 60%;
+  }
+  
+}
+
+@media (max-width: 426px) {
+  .authFormDiv {
+    width: 80%;
+  }
+  
+}
+
+@media (max-width: 321px) {
+  .authFormDiv {
+    width: 90%;
+  }
+  
 }

@@ -4,6 +4,7 @@ import ReviewCard from "./BluePrints/ReviewCard.jsx";
 
 function ReviewsPage() {
     return (
+  <section id="reviews">    
     <div className="reviewsPage">
         <div className="reviewsText">
             <h1>What People Say About Us?</h1>
@@ -15,6 +16,7 @@ function ReviewsPage() {
             <ReviewCard name="Dwight Schrute" avatar="https://img.nbc.com/sites/nbcunbc/files/metaverse_assets/1/0/6/3/3/2/dwight-500x500.jpg" rating={3} comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet" />
         </div>
     </div>
+  </section>    
     );
 }
 

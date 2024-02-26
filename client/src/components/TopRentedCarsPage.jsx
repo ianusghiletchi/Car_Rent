@@ -12,7 +12,9 @@ const Card = (props) => {
 };
 
 function TopRentedCarsPage() {
+
   return (
+  <section id="rental-deals">
     <div className='TRCP-Div'>
       <div className='TRCP-Text'>
         <h1>Top Rented Cars</h1>
@@ -34,6 +36,7 @@ function TopRentedCarsPage() {
         {/* ... other Cards ... */}
       </div>
     </div>
+  </section>    
   );
 }
 

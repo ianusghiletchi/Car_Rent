@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function Header() {
   return (
@@ -11,10 +12,12 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active" to="/">Home</Link>
-              <Link className="nav-link" to="/features">Features</Link>
-              <Link className="nav-link" to="/pricing">Pricing</Link>
+            <div className="navbar-nav d-flex justify-content-center" style={{flex: '1'}}>
+              <HashLink className="nav-link me-3" smooth to="#how-it-works">How It Works</HashLink>
+              <HashLink className="nav-link me-3" to="#rental-deals">Rental Deals</HashLink>
+              <HashLink className="nav-link me-3" to="#why-chose-us">Why Choose Us</HashLink>
+              <HashLink className="nav-link me-3" to="#reviews">Reviews</HashLink>
+              <HashLink className="nav-link me-3" to="#contact-us">Contact Us</HashLink>
             </div>
             <div className="navbar-nav ms-auto">
               <Link className="nav-link" to="/PortalPage">Sign Up</Link>

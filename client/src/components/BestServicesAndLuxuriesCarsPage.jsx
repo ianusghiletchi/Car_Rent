@@ -37,6 +37,7 @@ function BestServicesAndLuxuriesCarsPage() {
     }, []);  
 
   return (
+  <section id="why-chose-us">  
     <div style={{ backgroundColor: "#FFF9EF" }}>   
       <div className="BSALCP-Text">
         <h1>Best Services And Luxuries Cars</h1>
@@ -86,7 +87,8 @@ function BestServicesAndLuxuriesCarsPage() {
           </div>
         </div>
       </div>
-    </div>     
+    </div>
+  </section>
   );
 }
 

@@ -16,6 +16,7 @@ function Footer() {
     
 
     return (
+    <section id="contact-us">
         <div className="footer-main-div">
             <div className="brands-owned-div">
                 <SiAudi className="icon" />
@@ -106,6 +107,7 @@ function Footer() {
             </div>
             <p style={{ textAlign: 'center', color: 'gray', marginTop: '2.5%' }}>Copyright © 2024</p>
         </div>
+    </section>  
     )
 }
 

@@ -47,7 +47,7 @@ function LogIn() {
     return (
       <div>
         <Suspense fallback={<div>Loading...</div>}>
-          <Header />
+          <Header mainPage={false} />
         </Suspense>    
         <div className="authFormPageDiv">
             <div className="authFormDiv">

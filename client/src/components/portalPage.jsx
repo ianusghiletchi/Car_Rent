@@ -17,7 +17,7 @@ function PortalPage() {
   return (
   <div>
     <Suspense fallback={<div>Loading...</div>}>
-      <Header />
+      <Header mainPage={false}/>
     </Suspense>   
     <div className='portalPage container-fluid'>
       <div className='portalDiv'>

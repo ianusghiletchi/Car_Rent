@@ -1,5 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import LoadingEffcect from './LoadingEffect.jsx';
 import '../scss/authForm.scss';
 
 const Header = lazy(() => import('./Header.jsx'));
@@ -10,7 +11,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [userType, setUserType] = useState("");
-  const [secretCode, setSecretCode] = useState(""); // State for secret code
+  const [secretCode, setSecretCode] = useState("");
 
   // Extract userType from the URL using useLocation
   const location = useLocation();
@@ -70,8 +71,8 @@ function SignUp() {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Header />
+      <Suspense fallback={<LoadingEffcect />}>
+        <Header mainPage={false} />
       </Suspense>
       <div className="authFormPageDiv">
         <div className="authFormDiv" style={{ boxShadow: `0px 0px 50px ${getBoxShadowColor()}` }}>

@@ -1,6 +1,6 @@
 import React from "react";
 import '../scss/loading.scss';
-import { CircularProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material/index.js";
 import logo from "../imgs/logo.jpg";
 
 function LoadingEffect() {

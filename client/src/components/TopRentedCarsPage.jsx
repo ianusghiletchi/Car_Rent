@@ -37,6 +37,7 @@ function TopRentedCarsPage() {
       </div>
     </div>
   </section>    
+  
   );
 }
 

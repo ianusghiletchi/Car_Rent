@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../scss/homePage.scss';
 
 // Lazy-loaded components
+
 const Header = lazy(() => import('./Header.jsx'));
 const RentInput = lazy(() => import('./ReactWidgets/RentInput.jsx'));
 const HowItWorksPage = lazy(() => import('./HowItWorksPage.jsx'));

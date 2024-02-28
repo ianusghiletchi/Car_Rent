@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     bundle: [
       "bootstrap/dist/css/bootstrap.min.css",
+      "bootstrap/dist/js/bootstrap.bundle.min.js", // Added Bootstrap JS
       path.resolve(__dirname, "client/src/index.js"),
     ],
   },

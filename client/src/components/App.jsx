@@ -9,6 +9,7 @@ const SignUp = React.lazy(() => import('./SignUpPage.jsx'));
 const LogIn = React.lazy(() => import('./LogInPage.jsx'));
 const PortalPage = React.lazy(() => import('./PortalPage.jsx'));
 const LoadingEffect = React.lazy(() => import('./LoadingEffect.jsx'));
+const THeader = React.lazy(() => import('./testheader.jsx'));
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <React.Suspense fallback={<LoadingEffect />}>
         <div>
           <Routes>
+            <Route path="/header" element={<THeader />} />
             <Route path="/loading" element={<LoadingEffect />} />
             <Route path='/signUp' element={<SignUp />} />
             <Route path='/logIn' element={<LogIn />} />

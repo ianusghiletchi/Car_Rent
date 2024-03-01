@@ -123,6 +123,16 @@
     gap: 10px;
 }
 
+.hovered {
+
+    &:hover {
+        transform: scale(0.95);
+        cursor: pointer;
+    }
+
+
+}
+
 @media (max-width: 1445px) {
     .info-div {
         grid-template-columns: 1fr 1fr 1fr;

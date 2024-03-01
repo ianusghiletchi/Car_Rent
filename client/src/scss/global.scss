@@ -1,3 +1,18 @@
 body {
     font-family: "Merriweather Sans", sans-serif;
-  }
+}
+
+/* CSS */
+.hoverable {
+  /* Define default styles */
+  border-radius: 25px; /* Set border radius */
+  transition: background-color 0.3s ease, border-radius 0.3s ease; /* Add smooth transition */
+
+  /* Add any other default styles you want */
+}
+
+.hoverable:hover {
+  /* Define styles for when hovered */
+  background-color: rgba(0, 0, 0, 0.1); /* Make the background slightly darker */
+  border-radius: 25px; /* Increase border radius */
+}

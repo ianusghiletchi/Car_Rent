@@ -91,7 +91,7 @@ function Footer() {
 
                     <div className="newsletter-input-div">
                         <input type="email" placeholder="Email" className="newsletter-input shadow"></input>
-                        <button className="subscribe-button shadow">Subscribe</button>
+                        <button className="subscribe-button shadow hovered">Subscribe</button>
                     </div>
 
                     <div className="socials">

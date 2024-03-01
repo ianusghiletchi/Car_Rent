@@ -5,7 +5,7 @@ function Capsule(props) {
   const { Icon, label, backgroundColor, color } = props;
 
   return (
-    <div className="capsule-div shadow-lg" style={{ backgroundColor: backgroundColor }}>
+    <div className="capsule-div shadow-lg hoverable" style={{ backgroundColor: backgroundColor }}>
       {Icon && <Icon className="capsule-icon" />}
       <span className="capsule-label" style={{ color: color }}>{label}</span>
     </div>

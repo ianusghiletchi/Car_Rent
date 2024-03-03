@@ -7,8 +7,8 @@ function SocialsIconDiv(props) {
 
     return (
         <div className='socialsIconMainDiv'>
-            <div className='socialsIconDiv shadow-sm' style={{ borderRadius: '50%', border: '1px solid lightgray'}}>
-                <IconComponent className='icon' style={{ fontSize: '30px' }} />
+            <div className='socialsIconDiv shadow-sm'>
+                <IconComponent className='icon' style={{ fontSize: '200%' }} />
             </div>
         </div>
     );

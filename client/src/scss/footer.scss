@@ -199,7 +199,7 @@
       }
 }
 
-@media screen and (max-width: 376px) {
+@media (max-width: 376px) {
     .newsletter-input {
       width: 100%; /* Make the input field wider */
     }
@@ -208,13 +208,3 @@
       font-size: 10px; /* Adjust font size */
     }
   }
-  
-  
-
-@media (max-width: 321px) {
-
-    .icon {
-        font-size: 30px;
-    }
-    
-}

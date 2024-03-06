@@ -1,8 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import bcrypt from 'bcrypt';
 import pg from 'pg';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 const port = 5000;
 
@@ -32,22 +35,35 @@ app.use(bodyParser.json());
 app.set('db', db);
 
 // Route to handle user registration
-app.post('/signup', (req, res) => {
-  const { name, email, password, userType } = req.body;
+app.post('/signup', async (req, res) => {
+  const { name, email, password, confirmPassword, userType, secretCode } = req.body;
+  const employeeSecretCode = process.env.SECRET_CODE;
+  const salts = process.env.SALT_ROUNDS;
   const db = req.app.get('db');
 
-  db.query(
-    'INSERT INTO users (name, email, password, usertype) VALUES ($1, $2, $3, $4)',
-    [name, email, password, userType],
-    (err, result) => {
-      if (err) {
-        console.error('Error inserting user:', err);
-        res.status(500).json({ success: false, message: 'Internal server error' });
-      } else {
-        res.status(201).json({ success: true, message: 'User registered successfully' });
-      }
+  try {
+    const checkResult = await db.query(
+      'SELECT * FROM users WHERE email = $1',
+      [email]
+    );
+
+    if (checkResult.rows.length > 0) {
+      res.status(409).json({ success: false, message: 'Email already exists' });
+    } else if (userType === 'employee' && secretCode !== employeeSecretCode ) {
+      res.status(400).json({ success: false, message: 'Invalid secret code' });
+    } else if (password !== confirmPassword) {
+      res.status(400).json({ success: false, message: 'Passwords do not match' });
+    } else {
+      const hashedPassword = await bcrypt.hash(password, parseInt(salts));
+      const insertResult = await db.query(
+        'INSERT INTO users (name, email, password, userType) VALUES ($1, $2, $3, $4)',
+        [name, email, hashedPassword, userType]
+      );
     }
-  );
+  } catch (error) {
+    console.error('Error signing up:', error);
+    res.status(500).json({ success: false, message: 'Internal server error' });    
+  }
 });
 
 // Route to handle user login

@@ -46,8 +46,9 @@ function SignUp() {
           name,
           email,
           password,
+          confirmPassword,
           userType,
-          secretCode, // Include secretCode in the request body
+          secretCode,
         }),
       });
 

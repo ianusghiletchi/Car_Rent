@@ -1,7 +1,8 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import LoadingEffcect from './LoadingEffect.jsx';
 import '../scss/authForm.scss';
+import { Alert } from '@mui/material';
+import LoadingEffect from './LoadingEffect.jsx'; // Assuming LoadingEffect.jsx is your loading spinner component
 
 const Header = lazy(() => import('./Header.jsx'));
 
@@ -12,6 +13,8 @@ function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [userType, setUserType] = useState("");
   const [secretCode, setSecretCode] = useState("");
+  const [alertMessage, setAlertMessage] = useState(""); // State to hold alert message
+  const [alertSeverity, setAlertSeverity] = useState(""); // State to hold alert severity (success or warning)
 
   // Extract userType from the URL using useLocation
   const location = useLocation();
@@ -57,12 +60,13 @@ function SignUp() {
 
       // Check if the request was successful
       if (response.ok) {
-        // Do something with the successful response, for example, redirect to a new page
-        console.log("User registered successfully");
-        // Redirect or perform any other action as needed
+        // Set success alert
+        setAlertSeverity("success");
+        setAlertMessage(responseData.message);
       } else {
-        // Handle the error response
-        console.error("Error during signup:", responseData.error);
+        // Set warning alert
+        setAlertSeverity("warning");
+        setAlertMessage(responseData.message);
       }
 
     } catch (error) {
@@ -72,12 +76,17 @@ function SignUp() {
 
   return (
     <div>
-      <Suspense fallback={<LoadingEffcect />}>
+      <Suspense fallback={<LoadingEffect />}>
         <Header mainPage={false} />
       </Suspense>
       <div className="authFormPageDiv">
         <div className="authFormDiv" style={{ boxShadow: `0px 0px 50px ${getBoxShadowColor()}` }}>
           <h2 style={{ padding: "7% 0 2% 0" }}>Sign Up</h2>
+          {alertMessage && ( // Conditional rendering for alert
+            <Alert severity={alertSeverity} color={alertSeverity}>
+              {alertMessage}
+            </Alert>
+          )}
           <div className="form-group">
             <form onSubmit={handleSubmit}>
               <label htmlFor="username">Name</label>

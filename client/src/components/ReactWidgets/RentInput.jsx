@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputBluePrint from '../BluePrints/Input.jsx';
 import '../../scss/rentInput.scss';
+import { Alert } from '@mui/material';      
 
 function RentInput(props) {
-
   const [carType, setCarType] = useState("");
   const [whereToPickUp, setWhereToPickUp] = useState("");
   const [dateOfPickUp, setDateOfPickUp] = useState("");
   const [dateOfDropOff, setDateOfDropOff] = useState("");
+  const [alertSeverity, setAlertSeverity] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false); // Track whether to show the alert
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,22 +32,35 @@ function RentInput(props) {
 
       // Parse the JSON response
       const responseData = await response.json();
-
-      // Check if the request was successful
-      if (response.ok) {
-        // Do something with the successful response, for example, redirect to a new page
-        console.log("Car rented successfully");
-        // Redirect or perform any other action as needed
+  
+      if (response.status === 200) {
+        // Set success alert
+        setAlertSeverity("success");
+        setAlertMessage(responseData.message);
       } else {
-        // Handle the error response
-        console.error("Error during car rental:", responseData.error);
+        // Set warning alert
+        setAlertSeverity("warning");
+        setAlertMessage(responseData.error);
       }
-
+      
+      // Show the alert
+      setShowAlert(true);
+      
+      // Hide the alert after 1.2 seconds
+      setTimeout(() => setShowAlert(false), 1500);
     } catch (error) {
-      console.error("Error during car rental:", error);
+      console.error("Error during login:", error);
+      // Set error alert
+      setAlertSeverity("error");
+      setAlertMessage("An error occurred during login.");
+      
+      // Show the alert
+      setShowAlert(true);
+      
+      // Hide the alert after 1.2 seconds
+      setTimeout(() => setShowAlert(false), 1500);
     }
   };
-
 
   return (
     <div className='rentInputDiv'>
@@ -68,6 +84,10 @@ function RentInput(props) {
           >
             Submit
           </button>
+          {showAlert && ( // Conditional rendering for alert
+            <Alert severity={alertSeverity} color={alertSeverity}>
+              {alertMessage}
+            </Alert>)}
         </div>
       </form>
     </div>

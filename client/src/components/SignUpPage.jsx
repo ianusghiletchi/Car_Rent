@@ -1,12 +1,14 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../scss/authForm.scss';
 import { Alert } from '@mui/material';
-import LoadingEffect from './LoadingEffect.jsx'; // Assuming LoadingEffect.jsx is your loading spinner component
+import LoadingEffect from './LoadingEffect.jsx';
 
 const Header = lazy(() => import('./Header.jsx'));
 
 function SignUp() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +17,7 @@ function SignUp() {
   const [secretCode, setSecretCode] = useState("");
   const [alertMessage, setAlertMessage] = useState(""); // State to hold alert message
   const [alertSeverity, setAlertSeverity] = useState(""); // State to hold alert severity (success or warning)
+  const [redirect, setRedirect] = useState(false); // State to control redirection
 
   // Extract userType from the URL using useLocation
   const location = useLocation();
@@ -57,22 +60,32 @@ function SignUp() {
 
       // Parse the JSON response
       const responseData = await response.json();
-
-      // Check if the request was successful
-      if (response.ok) {
+  
+      if (response.status === 200) {
         // Set success alert
         setAlertSeverity("success");
         setAlertMessage(responseData.message);
+        // Delay redirection for 2 seconds to give the user time to read the alert
+        setTimeout(() => setRedirect(true), 1200);
       } else {
         // Set warning alert
         setAlertSeverity("warning");
-        setAlertMessage(responseData.message);
+        setAlertMessage(responseData.error);
       }
-
     } catch (error) {
-      console.error("Error during signup:", error);
+      console.error("Error during sign up:", error);
+      // Set error alert
+      setAlertSeverity("error");
+      setAlertMessage("An error occurred during sign up.");
     }
   };
+
+  // Redirect after successful sign up
+  useEffect(() => {
+    if (redirect) {
+      navigate(`/?success=${encodeURIComponent(alertMessage)}`);
+    }
+  }, [redirect, alertMessage, navigate]);
 
   return (
     <div>
@@ -82,7 +95,7 @@ function SignUp() {
       <div className="authFormPageDiv">
         <div className="authFormDiv" style={{ boxShadow: `0px 0px 50px ${getBoxShadowColor()}` }}>
           <h2 style={{ padding: "7% 0 2% 0" }}>Sign Up</h2>
-          {alertMessage && ( // Conditional rendering for alert
+          {alertMessage && (
             <Alert severity={alertSeverity} color={alertSeverity}>
               {alertMessage}
             </Alert>

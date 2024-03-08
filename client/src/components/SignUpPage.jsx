@@ -56,6 +56,7 @@ function SignUp() {
           userType,
           secretCode,
         }),
+        credentials: 'include',
       });
 
       // Parse the JSON response

@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import InputBluePrint from '../BluePrints/Input.jsx';
+import React, { useState } from 'react';
 import '../../scss/rentInput.scss';
-import { Alert } from '@mui/material';      
+import InputBluePrint from '../BluePrints/Input.jsx';
+import { Alert } from '@mui/material';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 
 function RentInput(props) {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
   const [carType, setCarType] = useState("");
   const [whereToPickUp, setWhereToPickUp] = useState("");
   const [dateOfPickUp, setDateOfPickUp] = useState("");
@@ -28,24 +31,28 @@ function RentInput(props) {
           dateOfPickUp,
           dateOfDropOff,
         }),
+        credentials: 'include',
       });
 
       // Parse the JSON response
       const responseData = await response.json();
-  
+
       if (response.status === 200) {
         // Set success alert
         setAlertSeverity("success");
         setAlertMessage(responseData.message);
+      } else if (response.status === 401) {
+        // Redirect to login page if user is not authenticated
+        navigate('/login');
       } else {
-        // Set warning alert
+        // Set warning alert for other errors
         setAlertSeverity("warning");
         setAlertMessage(responseData.error);
       }
-      
+
       // Show the alert
       setShowAlert(true);
-      
+
       // Hide the alert after 1.2 seconds
       setTimeout(() => setShowAlert(false), 1500);
     } catch (error) {
@@ -53,11 +60,11 @@ function RentInput(props) {
       // Set error alert
       setAlertSeverity("error");
       setAlertMessage("An error occurred during login.");
-      
+
       // Show the alert
       setShowAlert(true);
-      
-      // Hide the alert after 1.2 seconds
+
+      // Hide the alert after 1.5 seconds
       setTimeout(() => setShowAlert(false), 1500);
     }
   };

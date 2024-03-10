@@ -61,15 +61,14 @@ function LogIn() {
       </Suspense>
       <div className="authFormPageDiv">
         <div className="authFormDiv">
-          <div className="form-container"> {/* Add a wrapper div */}
             <h2 style={{ padding: "7% 0 2% 0" }}>Log In</h2>
             {alertMessage && (
               <Alert severity={alertSeverity} color={alertSeverity}>
                 {alertMessage}
               </Alert>
             )}
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
+            <div className="form-group">
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="email">Email address</label>
                 <input
                   type="email"
@@ -81,8 +80,6 @@ function LogIn() {
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="email"
                 />
-              </div>
-              <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
@@ -93,7 +90,6 @@ function LogIn() {
                   onChange={(e) => setPassword(e.target.value)}
                   autoComplete="current-password"
                 />
-              </div>
               <button
                 type="submit"
                 className="btn btn-warning"
@@ -102,13 +98,13 @@ function LogIn() {
                 Submit
               </button>
             </form>
+          </div>  
             <p>
               Don't have an account? <Link to="/portalPage">Sign Up</Link>
             </p>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

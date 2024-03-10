@@ -131,6 +131,7 @@ function SignUp() {
                 className="form-control"
                 id="password"
                 placeholder="Password"
+                autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
@@ -141,6 +142,7 @@ function SignUp() {
                 className="form-control"
                 id="confirmPassword"
                 placeholder="Confirm Password"
+                autoComplete="new-password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />

@@ -3,18 +3,18 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../scss/authForm.scss';
 import { Alert } from '@mui/material';
 import LoadingEffect from './LoadingEffect.jsx';
+import { useAuth } from './AuthContext.jsx';
 
 const Header = lazy(() => import('./Header.jsx'));
 
 function LogIn() {
   const navigate = useNavigate();
-
+  const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
   const [alertSeverity, setAlertSeverity] = useState("");
   const [redirect, setRedirect] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,6 +36,7 @@ function LogIn() {
       if (response.status === 200) {
         setAlertSeverity("success");
         setAlertMessage(responseData.message);
+        login();
         setTimeout(() => setRedirect(true), 1200);
       } else {
         setAlertSeverity("warning");
@@ -57,7 +58,7 @@ function LogIn() {
   return (
     <div>
       <Suspense fallback={<LoadingEffect />}>
-        <Header mainPage={false} />
+        <Header />
       </Suspense>
       <div className="authFormPageDiv">
         <div className="authFormDiv">

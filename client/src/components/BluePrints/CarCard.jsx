@@ -26,7 +26,7 @@ function CarCard(props) {
           <p><GiSteeringWheel />  {transmission_type}</p>
           <p><BsSpeedometer />  {speed} km/h</p>
         </div>
-        <h5 style={{ marginTop: '7px' }}>Starting at €{daily_price} per day</h5>
+        <h5 style={{ marginTop: '7px' }}>€{daily_price} per day</h5>
         <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
           <button className='OffCssBtn details-hover'><Capsule label="Details" backgroundColor="#FFCD0E" color='white'/></button>
           <button className='OffCssBtn'><Capsule label="Book Now" /></button>

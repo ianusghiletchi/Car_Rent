@@ -19,6 +19,7 @@ function HomePage() {
   const queryParams = new URLSearchParams(location.search);
   const successMessage = queryParams.get('success');
   const [alertMessage, setAlertMessage] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     if (successMessage) {
@@ -32,7 +33,7 @@ function HomePage() {
 
   return (
     <div className='homePageDiv'>
-      <Header />
+      <Header isAuthenticated={isAuthenticated}/>
       {alertMessage && (
           <Alert severity='success' color='success'>
             {alertMessage}

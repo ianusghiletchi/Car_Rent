@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from '../components/AuthContext.jsx';
 import '../scss/global.scss';
 
 const HomePage = React.lazy(() => import('./HomePage.jsx'));
@@ -13,6 +14,7 @@ const LoadingEffect = React.lazy(() => import('./LoadingEffect.jsx'));
 function App() {
   return (
     <Router>
+      <AuthProvider>
       <React.Suspense fallback={<LoadingEffect />}>
         <div>
           <Routes>
@@ -24,6 +26,7 @@ function App() {
           </Routes>
         </div>
       </React.Suspense>
+      </AuthProvider>
     </Router>
   );
 }

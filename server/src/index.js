@@ -165,6 +165,18 @@ app.post('/signup', async (req, res) => {
   }
 });
 
+app.post('/logout', (req, res) => {
+  req.logout(); // Clear the login session
+  res.status(200).json({ message: 'Logout successful' });
+});
+
+
+// Route to display user wanted cars
+
+app.get('/requestcars', (req, res) => {
+  
+})
+
 // Route to handle Renting a Car
 app.post('/rentcar', (req, res) => {
   console.log(req.body, req.user, req.isAuthenticated());

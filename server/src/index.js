@@ -112,9 +112,6 @@ app.post('/login', function(req, res, next) {
   })(req, res, next);
 });
 
-
-
-
 // Route to handle user registration
 app.post('/signup', async (req, res) => {
   const { name, email, password, confirmPassword, userType, secretCode } = req.body;
@@ -170,12 +167,51 @@ app.post('/logout', (req, res) => {
   res.status(200).json({ message: 'Logout successful' });
 });
 
+// Route for TopRentedCars
+
+app.get('/cars-data', async (req, res) => {
+  try {
+    const allCarsBrands = await db.query('SELECT DISTINCT brand FROM cars');
+    const topRentedCars = await db.query('SELECT * FROM cars ORDER BY speed DESC LIMIT 3');
+
+    if (allCarsBrands.rows.length > 0 && topRentedCars.rows.length > 0) {
+      // Extract brand names from the result rows
+      const brands = allCarsBrands.rows.map(row => row.brand);
+      // Extract top rented cars data
+      const topCars = topRentedCars.rows;
+
+      res.status(200).json({ brands: brands, topCars: topCars }); // Send both brands and top rented cars as JSON
+    } else {
+      res.status(404).json({ error: 'No cars found' });
+    }
+  } catch (error) {
+    console.error('Error retrieving cars:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
 
 // Route to display user wanted cars
 
-app.get('/requestcars', (req, res) => {
-  
-})
+app.post('/requestbrand', async (req, res) => {
+
+  const requested_brand = req.body.brand;
+
+  try {
+    const result = await db.query('SELECT * FROM cars WHERE brand = $1', [requested_brand]);
+    
+    if (result.rows.length === 0) {
+      res.status(404).json({ error: 'Car with that brand was not found' });
+    } else {
+      res.status(200).json(result.rows);
+    }
+  } catch (error) {
+    console.error('Error retrieving cars:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 
 // Route to handle Renting a Car
 app.post('/rentcar', (req, res) => {

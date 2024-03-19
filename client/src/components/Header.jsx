@@ -8,7 +8,6 @@ import Logo from '../imgs/logo.jpg';
 function Header({mainPage = true}) {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { isAuthenticated, logout } = useAuth();
-  console.log(isAuthenticated);
   const handleLogout = async () => {
     try {
       const response = await fetch("http://localhost:5000/logout", {

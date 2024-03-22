@@ -126,6 +126,7 @@ function TopRentedCarsPage() {
                 transmission_type={car.transmission_type}
                 speed={car.speed}
                 daily_price={car.daily_price}
+                car_details={car.car_details}
               />
             ))
           ) : (
@@ -139,6 +140,7 @@ function TopRentedCarsPage() {
                 transmission_type={car.transmission_type}
                 speed={car.speed}
                 daily_price={car.daily_price}
+                car_details={car.car_details}
               />
             ))
           )}
